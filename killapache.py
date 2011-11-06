@@ -3,7 +3,7 @@
 import optparse, os, re, socket, threading, time, urllib, urllib2, urlparse
 
 NAME        = "KillApachePy (Range Header DoS CVE-2011-3192)"
-VERSION     = "0.1c"
+VERSION     = "0.1d"
 AUTHOR      = "Miroslav Stampar (http://unconciousmind.blogspot.com | @stamparm)"
 LICENSE     = "Public domain (FREE)"
 SHORT       = "You'll typically have to wait for 10-20 iterations before first connection timeouts. More complex/bigger the page the better"
